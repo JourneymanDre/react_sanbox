@@ -1,0 +1,13 @@
+.heading {
+  color: maroon;
+  border-bottom: 1px solid #93491f;
+}
+ul {
+  color: #93491f;
+}
+
+.bird-img {
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+}

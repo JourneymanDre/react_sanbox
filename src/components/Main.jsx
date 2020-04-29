@@ -2,11 +2,23 @@ import React from "react";
 
 function Main() {
   const randomImage = "https://picsum.photos/200/?grayscale";
+  const currentDate = new Date();
+  // const year = currentDate.getFullYear();
+  const currentTime = currentDate.getHours();
   let greeting;
+  if (currentTime < 12) {
+    greeting = "Good Morning";
+  } else if (currentTime < 18) {
+    greeting = "Good Afternoon";
+  } else if (currentTime < 20) {
+    greeting = "Good Evening";
+  } else {
+    greeting = "Good Night";
+  }
   return (
     <div>
       <img src={randomImage} alt="random" />
-      <p> Say {greeting} to the first person I see on any given morning.</p>
+      <p> Say {greeting} to the first person I see on any given day.</p>
       <h1>Books I Am Currently Reading</h1>
 
       <ul>
